@@ -48,7 +48,7 @@ footer{color:var(--mut);font-size:13px;padding:40px 0;text-align:center}
   <select id="ttl"><option value="900">15 minutes</option><option value="1800">30 minutes</option><option value="3600" selected>1 heure</option><option value="10800">3 heures</option><option value="86400">24 heures</option><option value="259200">72 heures</option><option value="604800">7 jours</option></select>
   <div class="chk"><input type="checkbox" id="idle"><label for="idle" style="margin:0">Détruire automatiquement le salon après <b>5 minutes d'inactivité</b> (aucun message envoyé)</label></div>
   <button class="full" id="create">Créer le salon</button></div>
- <div class="card"><h3>🔑 Rejoindre un salon</h3>
+ <div class="card"><h3>Rejoindre un salon</h3>
   <label for="code">Code secret ou lien d'invitation</label>
   <input id="code" placeholder="Collez le code (43 caractères)" autocomplete="off" spellcheck="false">
   <button class="full" id="join">Rejoindre</button>
@@ -60,10 +60,10 @@ footer{color:var(--mut);font-size:13px;padding:40px 0;text-align:center}
 
 <h2>Pourquoi le chiffrement est solide</h2>
 <div class="grid">
- <div class="card"><h3>🔐 AES-256-GCM</h3><p>Standard utilisé par les gouvernements et les banques. Clé de 256 bits (2²⁵⁶ possibilités) : impossible à deviner par force brute. Le mode GCM assure aussi l'<b>intégrité</b> : tout message modifié est rejeté.</p></div>
- <div class="card"><h3>🧠 Zéro connaissance</h3><p>La clé est générée <b>dans votre navigateur</b> avec un générateur cryptographique (Web Crypto). Elle n'est jamais envoyée au serveur. Il ne voit que du texte chiffré illisible.</p></div>
- <div class="card"><h3>🚪 Identifiant dérivé</h3><p>Le serveur ne connaît qu'une empreinte SHA-256 du code, à sens unique : impossible de remonter à la clé.</p></div>
- <div class="card"><h3>🔥 Destruction totale</h3><p>À l'expiration (ou après 5 min d'inactivité si activé), le salon disparaît de la mémoire du serveur et votre navigateur efface la clé et les messages.</p></div>
+ <div class="card"><h3>chiffrement AES-256-GCM</h3><p>Standard utilisé par les gouvernements et les banques. Clé de 256 bits (2²⁵⁶ possibilités) : impossible à deviner par force brute. Le mode GCM assure aussi l'<b>intégrité</b> : tout message modifié est rejeté.</p></div>
+ <div class="card"><h3>Zéro connaissance</h3><p>La clé est générée <b>dans votre navigateur</b> avec un générateur cryptographique (Web Crypto). Elle n'est jamais envoyée au serveur. Il ne voit que du texte chiffré illisible.</p></div>
+ <div class="card"><h3>Identifiant dérivé</h3><p>Le serveur ne connaît qu'une empreinte SHA-256 du code, à sens unique : impossible de remonter à la clé.</p></div>
+ <div class="card"><h3>Destruction totale</h3><p>À l'expiration (ou après 5 min d'inactivité si activé), le salon disparaît de la mémoire du serveur et votre navigateur efface la clé et les messages.</p></div>
 </div>
 
 <h2>Comment ça marche</h2>
@@ -74,9 +74,9 @@ footer{color:var(--mut);font-size:13px;padding:40px 0;text-align:center}
 <li>Le serveur relaie les données chiffrées et détruit le salon à l'heure dite.</li>
 </ul>
 
-<div class="card warn" style="margin-top:32px"><h3>⚠️ Limites honnêtes</h3>
+<div class="card warn" style="margin-top:32px"><h3>⚠️ Limites </h3>
 <ul><li>Aucun système n'est « 100 % » sûr. Si quelqu'un obtient le code, il lit le salon : partagez-le prudemment.</li>
-<li>Votre adresse IP est visible par l'hébergeur : utilisez <b>Tor Browser</b> ou un VPN pour un vrai anonymat réseau.</li>
+<li>Votre adresse IP est visible par l'hébergeur : utilisez <b>Tor Browser</b> ou un VPN sur pour un vrai anonymat réseau.</li>
 <li>Un participant peut copier ou capturer les messages. Un appareil infecté compromet tout.</li>
 <li>Le code JavaScript vient du serveur : hébergez Velum vous-même, en HTTPS, pour maîtriser cette confiance.</li></ul></div>
 <footer>Velum — code source ouvert, aucun suivi, aucun cookie.</footer>
